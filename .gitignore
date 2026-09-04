@@ -1,0 +1,16 @@
+node_modules/
+dist/
+target/
+.turbo/
+.vite/
+coverage/
+*.log
+*.tsbuildinfo
+*.local
+.env
+.env.*
+!.env.example
+apps/desktop/src-tauri/gen/
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/binaries/
+work/

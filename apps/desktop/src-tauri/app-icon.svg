@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Personal Growth Assistant</title>
+  <desc id="description">An upward path connecting three milestones</desc>
+  <defs>
+    <linearGradient id="background" x1="80" y1="432" x2="432" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f4c81" />
+      <stop offset="1" stop-color="#2b88d8" />
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#background)" />
+  <path
+    d="M142 354c54-2 79-35 102-78 27-50 55-89 128-105"
+    fill="none"
+    stroke="#ffffff"
+    stroke-linecap="round"
+    stroke-width="34"
+  />
+  <path d="m336 137 70 24-47 58" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="30" />
+  <circle cx="144" cy="354" r="31" fill="#9fe7ff" />
+  <circle cx="244" cy="276" r="25" fill="#c8f3ff" />
+  <circle cx="330" cy="192" r="20" fill="#ffffff" />
+</svg>

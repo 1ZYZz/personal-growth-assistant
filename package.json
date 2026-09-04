@@ -1,0 +1,36 @@
+{
+  "name": "personal-growth-assistant",
+  "version": "1.1.1",
+  "private": true,
+  "description": "Local-first Windows personal growth assistant",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24.15.0",
+    "pnpm": ">=11.19.0"
+  },
+  "scripts": {
+    "build": "pnpm --filter @pga/desktop build",
+    "build:sidecar": "pnpm --filter @pga/agent-bridge build",
+    "desktop:build": "pnpm --filter @pga/desktop tauri build",
+    "dev": "pnpm --filter @pga/desktop dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "sbom": "node scripts/generate-sbom.mjs",
+    "rust:clippy": "cargo clippy --manifest-path apps/desktop/src-tauri/Cargo.toml --locked --all-targets --all-features -- -D warnings",
+    "rust:fmt": "cargo fmt --manifest-path apps/desktop/src-tauri/Cargo.toml -- --check",
+    "rust:test": "cargo test --manifest-path apps/desktop/src-tauri/Cargo.toml --locked --all-features",
+    "tauri": "pnpm --filter @pga/desktop tauri",
+    "test": "pnpm --filter @pga/desktop test && pnpm --filter @pga/agent-bridge test",
+    "typecheck": "pnpm --filter @pga/desktop typecheck && pnpm --filter @pga/contracts typecheck && pnpm --filter @pga/agent-bridge typecheck"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.0.1",
+    "globals": "17.12.0",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.69.0"
+  }
+}

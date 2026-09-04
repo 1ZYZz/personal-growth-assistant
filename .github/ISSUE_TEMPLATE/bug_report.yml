@@ -1,0 +1,75 @@
+name: Bug report
+description: Report a reproducible problem using synthetic or redacted data.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Personal Growth Assistant. Do not include tokens, credentials, private feed bodies, or personal task data. Security issues belong in the private process described in SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: 1.1.1
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Today and tasks
+        - Calendar and recurrence
+        - Notifications and tray
+        - Reviews and reports
+        - Industry intelligence
+        - Learning
+        - Backup, restore, or export
+        - Optional Codex integration
+        - Installation or update
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic or fully redacted example data.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional redacted context
+      description: Attach screenshots or logs only after checking them for personal data and secrets.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed personal data, credentials, tokens, and private source content.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

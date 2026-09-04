@@ -1,0 +1,42 @@
+[package]
+name = "personal-growth-assistant"
+version = "1.1.1"
+description = "Local-first Windows personal growth assistant"
+authors = ["Personal Growth Assistant contributors"]
+edition = "2021"
+license = "Apache-2.0"
+rust-version = "1.98.0"
+
+[lib]
+name = "personal_growth_assistant_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.6.3", features = [] }
+
+[dependencies]
+chrono = { version = "=0.4.45", features = ["serde"] }
+chrono-tz = { version = "=0.10.4", features = ["serde"] }
+feed-rs = { version = "=2.4.0", features = ["sanitize"] }
+fsrs = "=6.6.2"
+reqwest = { version = "=0.13.4", default-features = false, features = ["brotli", "charset", "deflate", "gzip", "rustls", "system-proxy"] }
+rrule = "=0.14.0"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+sqlx = { version = "=0.9.0", default-features = false, features = ["chrono", "json", "migrate", "runtime-tokio", "sqlite", "uuid"] }
+tauri = { version = "=2.11.5", features = ["tray-icon"] }
+tauri-plugin-deep-link = "=2.4.10"
+tauri-plugin-opener = "=2.5.5"
+tauri-plugin-single-instance = { version = "=2.4.4", features = ["deep-link"] }
+thiserror = "=2.0.20"
+tokio = { version = "=1.53.1", features = ["macros", "net", "process", "rt-multi-thread", "sync", "time"] }
+url = "=2.5.8"
+uuid = { version = "=1.26.0", features = ["serde", "v7"] }
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "=0.61.3", features = ["Data_Xml_Dom", "Foundation", "UI_Notifications"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
