@@ -14,8 +14,8 @@
 - [x] Formatting, linting, type checking, JavaScript tests, and production web build pass.
 - [x] Rust formatting, Clippy, and tests remain green for the release commit.
 - [x] Repository filenames and candidate text pass privacy and secret scans.
-- [ ] The public GitHub repository is created with `main` as the default branch.
-- [ ] The v1.1.1 release contains the Windows x64 installer and SHA-256 checksum.
+- [x] The public GitHub repository is created with `main` as the default branch.
+- [x] The v1.1.1 release contains the Windows x64 installer and SHA-256 checksum.
 
 ## Screenshot provenance
 
